@@ -64,7 +64,7 @@ module ChargebeeRails
     def build_subscription_payload
       @options[:trial_end] = 0 if @options[:skip_trial]
       @options[:plan_id] ||= ChargebeeRails.configuration.default_plan_id
-      raise PlanError.new.plan_not_configureed unless @options[:plan_id]
+      raise PlanError.new.plan_not_configured unless @options[:plan_id]
       @plan = Plan.find_by(plan_id: @options[:plan_id])
       raise PlanError.new.plan_not_found unless @plan
     end
