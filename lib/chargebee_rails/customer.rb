@@ -88,7 +88,7 @@ module ChargebeeRails
     # * *Raises*  :
     #   - Active record errors
     #
-    def create_subscription(subscrption_attrs)
+    def create_subscription(subscription_attrs)
       Subscription.create!(subscription_attrs)
     end
 
