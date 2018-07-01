@@ -80,17 +80,5 @@ module ChargebeeRails
     def invoices
       ChargeBee::Invoice.invoices_for_customer(chargebee_id).map(&:invoice)
     end
-
-
-    # Create an active record subscription of the chargebee subscription object for the customer
-    # * *Returns* :
-    #   - True
-    # * *Raises*  :
-    #   - Active record errors
-    #
-    def create_subscription(subscription_attrs)
-      Subscription.create!(subscription_attrs)
-    end
-
   end
 end
